@@ -1,0 +1,21 @@
+zuul:
+  routes:
+    uaa-service:
+      path: /uaa-service/**
+    productservices:
+      path: /productservices/**
+    operatorservices:
+      path: /operatorservices/**
+    shopservice:
+      path: /shopservice/**
+spring:
+  sleuth:
+    sampler:
+      probability: 1
+  zipkin:
+    baseUrl: http://localhost:9411/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

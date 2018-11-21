@@ -1,0 +1,28 @@
+spring:
+  data:
+    mongodb:
+      database: nextbillion_product
+      host: localhost
+      port: 27017
+  sleuth:
+    sampler:
+      probability: 1
+  zipkin:
+    baseUrl: http://localhost:9411/
+security:
+  oauth2:
+    resource:
+      jwt:
+        keyValue: |
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmcJSlmbgbmoHj4y9v2TevxDMK7r+rZCvJb9V0pi6YBNEM9OYdYC8IYkaODL11KXMoMGGPRrQYfI2yJ+a4fVhug8z3oH/9Ym1Xb5HP7qhT7hrO9+lvAkWkFzUHqFsm6u7pO/LY6mbQzwME1FX36Pme1cH1aespDQ8hjOOaPjxE1XfKDiIfA8J+k/U+JVXQQSPk/1nNMWJPOfsQwulZMqL2bn9/8h5NiIJPNq63PhiTz7eQLyiQgw+iENU4R+OoMo+XhfskzpkVt4dHUC3OIErBUENSVSZpuMW7pRS/wVnu2RbdrGuBz3x2ccuwuNsjJZ9GhA8b83H2CTv+XyjwQRNcQIDAQAB
+          -----END PUBLIC KEY-----
+      id: openid
+azure:
+  storage:
+    connection-string: DefaultEndpointsProtocol=https;AccountName=uvtposblobstorage;AccountKey=WORRI62pFlESK+hih+cj7R+ZfEvRVltpMNNpbiDH9GxD9/p1sETSAlXdp/D+LVODVCyfFXrZVgQuaVf2XTheow==;EndpointSuffix=core.windows.net
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
